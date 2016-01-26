@@ -1,0 +1,8 @@
+c:\users\susy\documents\visual studio 2013\Projects\Mantenimiento_Productos\Mantenimiento_Productos\bin\Debug\Mantenimiento_Productos.exe.config
+c:\users\susy\documents\visual studio 2013\Projects\Mantenimiento_Productos\Mantenimiento_Productos\bin\Debug\Mantenimiento_Productos.exe
+c:\users\susy\documents\visual studio 2013\Projects\Mantenimiento_Productos\Mantenimiento_Productos\bin\Debug\Mantenimiento_Productos.pdb
+c:\users\susy\documents\visual studio 2013\Projects\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.csprojResolveAssemblyReference.cache
+c:\users\susy\documents\visual studio 2013\Projects\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.Properties.Resources.resources
+c:\users\susy\documents\visual studio 2013\Projects\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.csproj.GenerateResource.Cache
+c:\users\susy\documents\visual studio 2013\Projects\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.exe
+c:\users\susy\documents\visual studio 2013\Projects\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.pdb
