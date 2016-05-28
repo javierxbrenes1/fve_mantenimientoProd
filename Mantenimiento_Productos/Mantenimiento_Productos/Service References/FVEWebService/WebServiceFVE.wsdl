@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:WebServiceFVEwsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:WebServiceFVEwsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:WebServiceFVEwsdl">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="Productos">
+        <xsd:all>
+          <xsd:element name="prod_id" type="xsd:int" />
+          <xsd:element name="tip_prod_id" type="xsd:int" />
+          <xsd:element name="prod_nom" type="xsd:string" />
+          <xsd:element name="prod_desc" type="xsd:string" />
+          <xsd:element name="prod_prc_act" type="xsd:float" />
+          <xsd:element name="prod_fec_cmb_prc" type="xsd:string" />
+          <xsd:element name="prod_sts" type="xsd:int" />
+          <xsd:element name="prod_prm" type="xsd:int" />
+          <xsd:element name="prod_rut_img" type="xsd:string" />
+          <xsd:element name="prod_unit_med" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="arrProductos">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:Productos[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="foObtenerProductosRequest" />
+  <wsdl:message name="foObtenerProductosResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="foObtenerTiposProductoRequest" />
+  <wsdl:message name="foObtenerTiposProductoResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="foBuscarProductoRequest">
+    <wsdl:part name="prod_id" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="foBuscarProductoResponse">
+    <wsdl:part name="vloProducto" type="tns:Productos" />
+  </wsdl:message>
+  <wsdl:message name="foActualizarProductoRequest">
+    <wsdl:part name="vloProducto" type="tns:Productos" />
+  </wsdl:message>
+  <wsdl:message name="foActualizarProductoResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="FVEWebServicePortType">
+    <wsdl:operation name="foObtenerProductos">
+      <wsdl:input message="tns:foObtenerProductosRequest" />
+      <wsdl:output message="tns:foObtenerProductosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="foObtenerTiposProducto">
+      <wsdl:input message="tns:foObtenerTiposProductoRequest" />
+      <wsdl:output message="tns:foObtenerTiposProductoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="foBuscarProducto">
+      <wsdl:input message="tns:foBuscarProductoRequest" />
+      <wsdl:output message="tns:foBuscarProductoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="foActualizarProducto">
+      <wsdl:input message="tns:foActualizarProductoRequest" />
+      <wsdl:output message="tns:foActualizarProductoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FVEWebServiceBinding" type="tns:FVEWebServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="foObtenerProductos">
+      <soap:operation soapAction="http://localhost/WS/WebServiceFVE.php/foObtenerProductos" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceFVEwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceFVEwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="foObtenerTiposProducto">
+      <soap:operation soapAction="http://localhost/WS/WebServiceFVE.php/foObtenerTiposProducto" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceFVEwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceFVEwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="foBuscarProducto">
+      <soap:operation soapAction="http://localhost/WS/WebServiceFVE.php/foBuscarProducto" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceFVEwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceFVEwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="foActualizarProducto">
+      <soap:operation soapAction="http://localhost/WS/WebServiceFVE.php/foActualizarProducto" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceFVEwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceFVEwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FVEWebService">
+    <wsdl:port name="FVEWebServicePort" binding="tns:FVEWebServiceBinding">
+      <soap:address location="http://localhost:8082/WS/WebServiceFVE.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

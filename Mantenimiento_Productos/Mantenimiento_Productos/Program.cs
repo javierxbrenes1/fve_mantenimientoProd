@@ -17,7 +17,13 @@ namespace Mantenimiento_Productos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UISplash());
+            //Creo el splash 
+            UISplash vloSplash = new UISplash();
+            if (vloSplash.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new VerFruta_Express());
+            }
+            
         }
     }
 }

@@ -6,6 +6,14 @@ c:\users\susy\documents\visual studio 2013\Projects\Mantenimiento_Productos\Mant
 c:\users\susy\documents\visual studio 2013\Projects\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.csproj.GenerateResource.Cache
 c:\users\susy\documents\visual studio 2013\Projects\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.exe
 c:\users\susy\documents\visual studio 2013\Projects\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.pdb
+C:\fuentes\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.Properties.Resources.resources
+C:\fuentes\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.UI.UIMantenimiento.resources
+C:\fuentes\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.UI.UISplash.resources
+C:\fuentes\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.UI.VerFruta_Express.resources
+C:\fuentes\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.csproj.GenerateResource.Cache
 C:\fuentes\Mantenimiento_Productos\Mantenimiento_Productos\bin\Debug\Mantenimiento_Productos.exe.config
+C:\fuentes\Mantenimiento_Productos\Mantenimiento_Productos\bin\Debug\Mantenimiento_Productos.exe
+C:\fuentes\Mantenimiento_Productos\Mantenimiento_Productos\bin\Debug\Mantenimiento_Productos.pdb
+C:\fuentes\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.csprojResolveAssemblyReference.cache
 C:\fuentes\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.exe
 C:\fuentes\Mantenimiento_Productos\Mantenimiento_Productos\obj\Debug\Mantenimiento_Productos.pdb

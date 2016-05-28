@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UISplash));
             this.pboxImagen = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,15 +47,19 @@
             this.pboxImagen.TabIndex = 0;
             this.pboxImagen.TabStop = false;
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(390, 221);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 22);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "VerFrutaExpress | 2016";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(378, 221);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(225, 22);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "VerFrutaExpress | 2016";
+            // 
+            // tmrTiempo
+            // 
+            this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
             // 
             // UISplash
             // 
@@ -61,10 +67,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(615, 252);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.pboxImagen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UISplash";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UISplash";
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagen)).EndInit();
             this.ResumeLayout(false);
@@ -75,6 +82,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pboxImagen;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Timer tmrTiempo;
     }
 }

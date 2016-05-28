@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +48,16 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\FVEWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\mierda\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="UI\UILogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +76,15 @@
     <Compile Include="UI\UISplash.Designer.cs">
       <DependentUpon>UISplash.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\VerFruta-Express.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\VerFruta-Express.Designer.cs">
+      <DependentUpon>VerFruta-Express.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WS PHP\CustomTextMessageBindingElement.cs" />
+    <Compile Include="WS PHP\CustomTextMessageEncoder.cs" />
+    <Compile Include="WS PHP\CustomTextMessageEncoderFactory.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -73,9 +94,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\UIMantenimiento.resx">
+      <DependentUpon>UIMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\UISplash.resx">
       <DependentUpon>UISplash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\VerFruta-Express.resx">
+      <DependentUpon>VerFruta-Express.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -85,13 +115,46 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Service References\FVEWebService\Mantenimiento_Productos.FVEWebService.Productos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FVEWebService\WebServiceFVE.wsdl" />
+    <None Include="Service References\mierda\pruebaWS.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AD\" />
     <Folder Include="LN\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\FVEWebService\" />
+    <WCFMetadataStorage Include="Service References\mierda\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FVEWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FVEWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FVEWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\mierda\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\mierda\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\mierda\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
